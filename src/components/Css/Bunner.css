@@ -1,0 +1,20 @@
+.bunner {
+    margin: 0;
+    background-image: url('https://i.pinimg.com/originals/cb/5b/a6/cb5ba69981ccc75b7b5633fd058436f6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+  
+  }
+
+.bunner:after {
+  content:"";
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  opacity:0.2;
+  z-index:-1;
+}

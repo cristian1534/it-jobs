@@ -1,0 +1,68 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-adminapi-dev-15904-authRole",
+      "UnauthRoleArn": "arn:aws:iam::488786245942:role/amplify-adminapi-dev-15904-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::488786245942:role/amplify-adminapi-dev-15904-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-adminapi-dev-15904-deployment",
+      "UnauthRoleName": "amplify-adminapi-dev-15904-unauthRole",
+      "StackName": "amplify-adminapi-dev-15904",
+      "StackId": "arn:aws:cloudformation:us-east-1:488786245942:stack/amplify-adminapi-dev-15904/53c4e5d0-bb51-11eb-a301-0a3071d8b5ff",
+      "AmplifyAppId": "d35m0f6d5dbw3l"
+    }
+  },
+  "function": {
+    "apiFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2021-05-22T23:08:37.173Z",
+      "lastPackageTimeStamp": "2021-05-22T23:08:38.885Z",
+      "distZipFilename": "apiFunction-74307962676671457766-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-adminapi-dev-15904-deployment",
+        "s3Key": "amplify-builds/apiFunction-74307962676671457766-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-adminapi-dev-15904-deployment/amplify-cfn-templates/function/apiFunction-cloudformation-template.json",
+        "logicalId": "functionapiFunction"
+      },
+      "lastPushTimeStamp": "2021-05-22T23:10:25.381Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:488786245942:function:apiFunction-dev",
+        "Name": "apiFunction-dev",
+        "LambdaExecutionRole": "adminapiLambdaRoleaef968b0-dev"
+      },
+      "lastPushDirHash": "nDfWfPlUrESpZwFYd0Eo2ZGFTcs="
+    }
+  },
+  "api": {
+    "itjobs": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "apiFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-adminapi-dev-15904-deployment/amplify-cfn-templates/api/itjobs-cloudformation-template.json",
+        "logicalId": "apiitjobs"
+      },
+      "lastPushTimeStamp": "2021-05-22T23:10:25.381Z",
+      "output": {
+        "ApiName": "itjobs",
+        "RootUrl": "https://m2vr3xr474.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "m2vr3xr474"
+      },
+      "lastPushDirHash": "pKOkTbknufACtAtTdK4RBTQP+kE="
+    }
+  }
+}
